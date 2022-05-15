@@ -547,11 +547,14 @@ button, input, optgroup, select, textarea {
     .intro-gif{
         display: none;
     }
-    .wrapper1{
+    .home-page{
         background-image: url("Images/homepage-gif1.gif");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
+    }
+    
+    .wrapper1{
         margin-top: 0;
     }
     .wrapper1-ctn{
