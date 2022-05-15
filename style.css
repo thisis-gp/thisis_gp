@@ -388,7 +388,13 @@ button, input, optgroup, select, textarea {
     margin-top: 30px;
 }
 
-.flat-button:hover{
+.flat-button span button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.flat-button span button:hover{
     color: #fff;
 }
 
