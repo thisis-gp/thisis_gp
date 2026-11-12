@@ -74,7 +74,7 @@ export const caseStudies: Record<Slug, CaseStudy> = {
     },
     role: "Solo builder, co-author of the IEEE paper",
     started: "September 2025, rebuilt August 2026",
-    status: "Runs on a 2-core VM. The live demo is offline while I fix its hosting.",
+    status: "Live demo on Vercel, with the backend on a free 2-core VM.",
     facts: [
       { value: "924", label: "Supreme Court judgments from 2024, in 46,281 passages" },
       { value: "5.5 s", label: "for a cold search on a 2-core CPU-only VM, about 3 ms once warm" },
