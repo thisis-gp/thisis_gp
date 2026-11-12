@@ -22,6 +22,7 @@ jobs:
     env:
       NEXT_PUBLIC_BASE_PATH: /thisis_gp
       NEXT_PUBLIC_SITE_URL: https://thisis-gp.github.io/thisis_gp
+      NEXT_PUBLIC_ENGINE_LIVE: "1"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

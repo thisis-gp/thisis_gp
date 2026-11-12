@@ -2,7 +2,7 @@
 
 My portfolio: https://thisis-gp.github.io/thisis_gp/
 
-A static site built with Next.js. It shows my projects, case studies, writing and research, and a small pixel-character maker.
+A static site built with Next.js. It shows my projects, case studies, writing and research, a pixel-character maker, and my Java 2D game engine ported to run in the browser (the engine is in the public/engine folder).
 
 ## Run it
 

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>2D Game Engine - play mode</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; font-family: system-ui, sans-serif; }
+  #game { display: block; width: 100vw; height: 100vh; image-rendering: pixelated; }
+  #status { position: fixed; inset: 0; display: grid; place-items: center; color: #ddd; font-size: 1.1rem; pointer-events: none; }
+  #status[hidden] { display: none; }
+  #status.error { color: #ff8a80; }
+  #hint { position: fixed; left: 12px; bottom: 10px; color: #fff; background: rgba(0,0,0,.55); padding: 6px 10px; border-radius: 6px; font-size: .85rem; }
+  kbd { background: #333; border-radius: 3px; padding: 1px 5px; }
+</style>
+</head>
+<body>
+<canvas id="game" tabindex="0"></canvas>
+<div id="status">Loading level...</div>
+<div id="hint"><kbd>&larr;</kbd> <kbd>&rarr;</kbd> or <kbd>A</kbd> <kbd>D</kbd> move &middot; hold <kbd>Space</kbd> to jump &middot; <kbd>E</kbd> fireball (with a fire flower)</div>
+<script src="engine.js"></script>
+<script src="engine-loader.js"></script>
+<script src="player-sprite.js"></script>
+<script src="pause.js"></script>
+</body>
+</html>
