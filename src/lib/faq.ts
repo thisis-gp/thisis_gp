@@ -2,6 +2,7 @@
 export const FAQ: { q: string; a: string }[] = [
   { q: "Who is D A Gurupriyan?", a: "D A Gurupriyan is a software engineer in Bangalore, India. He finds real-world problems and builds the software that solves them, mostly in AI, data and Android." },
   { q: "Where does he work?", a: "He is a Software Development Engineer I at Nova Benefits in Bangalore. He joined as an intern and converted to full-time." },
+  { q: "What does he do at work?", a: "At Nova Benefits he builds claims, reporting and AI systems: a deck builder that cut quarterly-review preparation from 3 hours to 20 minutes, retrieval and safety work that cut a production assistant's wrong answers by 60%, insurer and TPA integrations on an 82K-claim platform, and OCR document extraction that auto-filled 2,782 claim forms." },
   { q: "What has he built?", a: "ctxd, an MCP server that gives AI agents reviewed database context and read-only SQL. Kanoon, a cited-answer search engine over 924 Supreme Court judgments. NILA, an Android launcher with on-device AI. slimpdf, a PDF compressor that never uploads your file." },
   { q: "Has he published research?", a: "Yes. He is a co-author of AILSE, an AI driven legal search engine for Indian Supreme Court cases, presented at ICCIDS 2026 in Chennai. He built the system the paper describes." },
   { q: "Does he write articles?", a: "Yes, on Hashnode. His articles cover building a retro game with Amazon Q CLI and an introduction to Bun 1.0." },

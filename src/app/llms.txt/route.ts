@@ -3,6 +3,7 @@ import { FAQ } from "@/lib/faq";
 import { EMAIL, NAME, PROFILES, TAGLINE, abs } from "@/lib/site";
 import { projects } from "@/lib/projects";
 import { caseStudies } from "@/lib/caseStudies";
+import { WORK } from "@/lib/work";
 import { formatDate, getWriting } from "@/lib/writing";
 
 export const dynamic = "force-static";
@@ -32,6 +33,9 @@ export async function GET() {
     "",
     "## Other projects",
     ...rest,
+    "",
+    `## Work at ${WORK.company}`,
+    ...WORK.items.map((w) => `- ${w.title}: ${w.text}`),
     "",
     "## Quick answers",
     ...FAQ.map((f) => `- ${f.q} ${f.a}`),

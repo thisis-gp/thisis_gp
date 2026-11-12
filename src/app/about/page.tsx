@@ -5,6 +5,7 @@ import { SiteFooter } from "../components/SiteFooter";
 import { FAQ } from "@/lib/faq";
 import { breadcrumbs, faqPage, graph, person, website } from "@/lib/schema";
 import { EMAIL } from "@/lib/site";
+import { WORK } from "@/lib/work";
 
 export const metadata: Metadata = {
   title: "About D A Gurupriyan",
@@ -31,6 +32,16 @@ export default function About() {
           </div>
         </div>
       </section>
+      <section className="indexSection">
+        <div className="container caseCols">
+          <h2>At work.</h2>
+          <div className="faq">
+            <p className="lead">{WORK.role}, {WORK.company}. {WORK.note}</p>
+            {WORK.items.map((w) => <div key={w.title}><h3>{w.title}</h3><p>{w.text}</p></div>)}
+          </div>
+        </div>
+      </section>
+
       <section className="caseEnd">
         <div className="container">
           <div className="links"><a className="button" href={`mailto:${EMAIL}`}>Email me</a><Link className="link" href="/projects/">All projects</Link><Link className="link" href="/writing/">Writing and research</Link></div>
