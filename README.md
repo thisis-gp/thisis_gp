@@ -1,29 +1,27 @@
-# Portfolio Website
+# D A Gurupriyan
 
-A modern, responsive personal portfolio website built with HTML, CSS, and JavaScript, showcasing projects, skills, and blog posts. Hosted on GitHub Pages.
+My portfolio: https://thisis-gp.github.io/thisis_gp/
 
-## Live Demo
+A static site built with Next.js. It shows my projects, case studies, writing and research, and a small pixel-character maker.
 
-🚀 [View Live Demo](https://thisis-gp.github.io/thisis_gp/)
+## Run it
 
-## Features
+```bash
+npm ci
+npm run dev
+```
 
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Dynamic Typing Effect**: Animated text for profession titles
-- **Project Showcase**: Interactive project cards with live demos and GitHub links
-- **Experience Section**: Detailed technical skills display
-- **Blog Section**: Latest blog posts with featured articles
-- **Contact Integration**: Direct email and LinkedIn access
-- **Hamburger Menu**: Mobile-friendly navigation
-- **Downloadable Resume**: One-click CV download
+## Add to it
 
-## Technologies Used
+The pages are generated from a few data files, so growing the site means editing data, not pages.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+- `src/lib/allProjects.ts`: every project
+- `src/lib/projects.ts` and `src/lib/caseStudies.ts`: the lead projects and their case studies
+- `src/lib/writing.ts`: papers and articles (new Hashnode posts are picked up at build time)
+- `src/lib/faq.ts`: the quick answers on the About page
 
-# Acknowledgments
-  - Poppins Google Font
-  - Font Awesome Icons
-  - Shields.io Badges
+The sitemap, `llms.txt`, the RSS feed and the structured data all update from those files.
+
+## Deploy
+
+A GitHub Actions workflow builds the site and publishes it to GitHub Pages on every push to `master` and once a day.
