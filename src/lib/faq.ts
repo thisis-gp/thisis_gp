@@ -7,6 +7,7 @@ export const FAQ: { q: string; a: string }[] = [
   { q: "Does he write articles?", a: "Yes, on Hashnode. His articles cover building a retro game with Amazon Q CLI and an introduction to Bun 1.0." },
   { q: "What technologies does he use?", a: "Python, TypeScript, JavaScript, Java, Kotlin and SQL. React, Node.js, FastAPI and Jetpack Compose. PostgreSQL, Redis and Docker. Retrieval, reranking and MCP for AI work." },
   { q: "What education does he have?", a: "An integrated MSc in Computer Science from Pondicherry University, with a CGPA of 8.75 out of 10." },
+  { q: "Has he done any special training?", a: "Yes. In July 2024 he was selected for the Amazon ML Summer School, a program on supervised learning, deep neural networks, generative AI, large language models and reinforcement learning." },
   { q: "Has he won any awards?", a: "His MindSpace mental-health chatbot won the Best Intervention Award at the TYCL Mental Health Exhibition in 2024." },
   { q: "How can I contact him?", a: "Email dagurupriyan@gmail.com, or find him on LinkedIn and GitHub as thisis-gp." },
 ];

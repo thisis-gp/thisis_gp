@@ -19,6 +19,7 @@ export const person = {
   address: { "@type": "PostalAddress", addressLocality: "Bangalore", addressCountry: "IN" },
   knowsAbout: ["Software engineering", "Retrieval-augmented generation", "Model Context Protocol", "Android development", "Data engineering", "Python", "TypeScript", "Kotlin"],
   award: "Best Intervention Award, TYCL Mental Health Exhibition 2024",
+  hasCredential: { "@type": "EducationalOccupationalCredential", name: "Amazon ML Summer School 2024 (selected participant)", credentialCategory: "program selection" },
   sameAs: Object.values(PROFILES),
 };
 

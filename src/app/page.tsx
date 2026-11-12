@@ -64,7 +64,7 @@ export default async function Home() {
 
       <section className="statement">
         <div className="container">
-          <p>I&apos;m an SDE I at Nova Benefits in Bangalore, with an integrated MSc from Pondicherry University. I co-authored an <a href="https://ieeexplore.ieee.org/document/11407722" target="_blank" rel="noreferrer">IEEE paper</a> on the legal search engine I built, and my <a href="https://github.com/thisis-gp/MindSpace" target="_blank" rel="noreferrer">MindSpace</a> chatbot won a mental-health award in 2024.</p>
+          <p>I&apos;m an SDE I at Nova Benefits in Bangalore, with an integrated MSc from Pondicherry University. In 2024 I was selected for the Amazon ML Summer School. I co-authored an <a href="https://ieeexplore.ieee.org/document/11407722" target="_blank" rel="noreferrer">IEEE paper</a> on the legal search engine I built, and my <a href="https://github.com/thisis-gp/MindSpace" target="_blank" rel="noreferrer">MindSpace</a> chatbot won a mental-health award in 2024.</p>
         </div>
       </section>
 
