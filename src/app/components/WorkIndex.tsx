@@ -1,20 +1,32 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { caseStudies } from "@/lib/caseStudies";
 import { projectBySlug, projects, type Slug } from "@/lib/projects";
 import { LiveProof } from "./LiveProof";
 import { Terminal } from "./Terminal";
 
+const ROTATE_MS = 30_000;
+
 export function WorkIndex({ stats }: { stats: Record<Slug, string[]> }) {
   const [chosen, setChosen] = useState<Slug>("ctxd");
+  const [paused, setPaused] = useState(false);
+  const [userPicked, setUserPicked] = useState(false);
+
+  // Move to the next project every 30 seconds. Stops while the visitor hovers or focuses here,
+  // for good once they pick a project themselves, and never runs for reduced-motion visitors.
+  useEffect(() => {
+    if (paused || userPicked || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const t = window.setInterval(() => setChosen((cur) => projects[(projects.findIndex((p) => p.slug === cur) + 1) % projects.length].slug), ROTATE_MS);
+    return () => window.clearInterval(t);
+  }, [paused, userPicked]);
   return (
-    <div className="container workGrid">
+    <div className="container workGrid" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocus={() => setPaused(true)} onBlur={() => setPaused(false)}>
       <h2 className="visually-hidden">Selected work</h2>
       <div className="workText">
         <div className="picker" role="group" aria-label="Choose a project">
           {projects.map(({ slug, title }) => (
-            <button key={slug} type="button" className="pick" aria-pressed={chosen === slug} onClick={() => setChosen(slug)}>{title}</button>
+            <button key={slug} type="button" className="pick" aria-pressed={chosen === slug} onClick={() => { setChosen(slug); setUserPicked(true); }}>{title}</button>
           ))}
         </div>
         {projects.map(({ slug }) => {
