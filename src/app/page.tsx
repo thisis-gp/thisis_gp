@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Gp } from "./components/Gp";
 import { JsonLd } from "./components/JsonLd";
 import { Logo } from "./components/Logo";
+import { NavLinks } from "./components/NavLinks";
 import { SiteFooter } from "./components/SiteFooter";
 import { WorkIndex } from "./components/WorkIndex";
 import { allProjects } from "@/lib/allProjects";
@@ -22,7 +23,7 @@ export default async function Home() {
       <section className="hero">
         <header className="nav">
           <Link href="/" className="wordmark" aria-label="D A Gurupriyan, home"><Logo /><span><b>D A</b><br />Gurupriyan</span></Link>
-          <nav aria-label="Main"><a href="#work">Work</a><Link href="/projects/">All projects</Link><Link href="/writing/">Writing</Link><Link href="/play/">Play</Link><a href="#contact">Contact</a><a href="https://www.linkedin.com/in/thisis-gp/" target="_blank" rel="noreferrer">LinkedIn</a></nav>
+          <NavLinks />
         </header>
         <h1 className="poster"><span>Find the problem.</span><span>Then fix it.</span></h1>
         <div className="container heroCopy">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "../../components/JsonLd";
+import { LiveProof } from "../../components/LiveProof";
 import { Terminal } from "../../components/Terminal";
 import { SiteFooter } from "../../components/SiteFooter";
 import { caseStudies } from "@/lib/caseStudies";
@@ -49,7 +50,7 @@ export default async function ProjectPage({ params }: Props) {
         <div className="container caseTryGrid">
           <Terminal title={study.terminal.title} lines={study.terminal.lines} />
           <div className="caseTryAside">
-            <ul className="proof">{stats.map((s) => <li key={s}>{s}</li>)}</ul>
+            <LiveProof slug={slug} initial={stats} />
             {hasDownloads && <p className="meta">Download counts include bots and mirrors.</p>}
             <div className="links">
               {project.links.map((l) => <a className="link" key={l.href} href={l.href} target="_blank" rel="noreferrer">{l.label}</a>)}

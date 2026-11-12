@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { caseStudies } from "@/lib/caseStudies";
 import { projectBySlug, projects, type Slug } from "@/lib/projects";
+import { LiveProof } from "./LiveProof";
 import { Terminal } from "./Terminal";
 
 export function WorkIndex({ stats }: { stats: Record<Slug, string[]> }) {
@@ -38,7 +39,7 @@ export function WorkIndex({ stats }: { stats: Record<Slug, string[]> }) {
             <div className="fig" key={slug} data-on={chosen === slug || undefined}>
               <p className="pitch">{c.pitch}</p>
               <Terminal title={c.terminal.title} lines={c.terminal.lines} />
-              <ul className="proof">{stats[slug].map((s) => <li key={s}>{s}</li>)}</ul>
+              <LiveProof slug={slug} initial={stats[slug]} />
             </div>
           );
         })}
